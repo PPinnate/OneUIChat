@@ -1,0 +1,96 @@
+{
+  "machine_profile": {
+    "name": "Apple Silicon M3 Max",
+    "unified_memory_gb": 48,
+    "default_reserve_gb": 10
+  },
+  "models": [
+    {
+      "id": "chat.qwen3-next-80b-a3b",
+      "task": "chat",
+      "display_name": "Qwen3-Next-80B-A3B-Instruct",
+      "license": "Apache-2.0 (check repo card)",
+      "repo_id": "bartowski/Qwen_Qwen3-Next-80B-A3B-Instruct-GGUF",
+      "runtime": "llama.cpp",
+      "variants": [
+        {"id": "Q3_K_L", "filename": "Qwen_Qwen3-Next-80B-A3B-Instruct-Q3_K_L.gguf", "approx_size_gb": 38, "quant": "Q3_K_L"},
+        {"id": "Q3_K_XL", "filename": "Qwen_Qwen3-Next-80B-A3B-Instruct-Q3_K_XL.gguf", "approx_size_gb": 38, "quant": "Q3_K_XL"},
+        {"id": "Q2_K", "filename": "Qwen_Qwen3-Next-80B-A3B-Instruct-Q2_K.gguf", "approx_size_gb": 28, "quant": "Q2_K"}
+      ]
+    },
+    {
+      "id": "code.qwen3-coder-next",
+      "task": "code",
+      "display_name": "Qwen3-Coder-Next",
+      "license": "Apache-2.0 (check repo card)",
+      "repo_id": "bartowski/Qwen_Qwen3-Coder-Next-GGUF",
+      "runtime": "llama.cpp",
+      "variants": [
+        {"id": "Q3_K_L", "filename": "Qwen_Qwen3-Coder-Next-Q3_K_L.gguf", "approx_size_gb": 38, "quant": "Q3_K_L"},
+        {"id": "Q3_K_XL", "filename": "Qwen_Qwen3-Coder-Next-Q3_K_XL.gguf", "approx_size_gb": 38, "quant": "Q3_K_XL"},
+        {"id": "Q2_K", "filename": "Qwen_Qwen3-Coder-Next-Q2_K.gguf", "approx_size_gb": 28, "quant": "Q2_K"}
+      ]
+    },
+    {
+      "id": "asr.qwen3-asr",
+      "task": "asr",
+      "display_name": "Qwen3-ASR",
+      "license": "Tongyi-Qianwen",
+      "repo_id": "Qwen/Qwen3-ASR-1.7B",
+      "runtime": "python",
+      "variants": [
+        {"id": "1.7B", "filename": "", "approx_size_gb": 4},
+        {"id": "0.6B", "filename": "", "approx_size_gb": 2, "repo_id_override": "Qwen/Qwen3-ASR-0.6B"}
+      ]
+    },
+    {
+      "id": "tts.qwen3-tts",
+      "task": "tts",
+      "display_name": "Qwen3-TTS-12Hz",
+      "license": "Tongyi-Qianwen",
+      "repo_id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "runtime": "python",
+      "variants": [
+        {"id": "1.7B-Base", "filename": "", "approx_size_gb": 4, "repo_id_override": "Qwen/Qwen3-TTS-12Hz-1.7B-Base"},
+        {"id": "1.7B-VoiceDesign", "filename": "", "approx_size_gb": 4, "repo_id_override": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign"},
+        {"id": "1.7B-CustomVoice", "filename": "", "approx_size_gb": 4, "repo_id_override": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice"},
+        {"id": "0.6B-Base", "filename": "", "approx_size_gb": 2, "repo_id_override": "Qwen/Qwen3-TTS-12Hz-0.6B-Base"}
+      ]
+    },
+    {
+      "id": "ocr.qwen3-vl",
+      "task": "ocr",
+      "display_name": "Qwen3-VL-Instruct-GGUF",
+      "license": "Tongyi-Qianwen",
+      "repo_id": "Qwen/Qwen3-VL-8B-Instruct-GGUF",
+      "runtime": "llama.cpp",
+      "variants": [
+        {"id": "8B", "filename": "", "approx_size_gb": 8, "mmproj_required": true, "repo_id_override": "Qwen/Qwen3-VL-8B-Instruct-GGUF"},
+        {"id": "4B", "filename": "", "approx_size_gb": 5, "mmproj_required": true, "repo_id_override": "Qwen/Qwen3-VL-4B-Instruct-GGUF"}
+      ]
+    },
+    {
+      "id": "image.z-image-turbo",
+      "task": "image",
+      "display_name": "Tongyi-MAI Z-Image-Turbo",
+      "license": "Tongyi",
+      "repo_id": "Tongyi-MAI/Z-Image-Turbo",
+      "runtime": "diffusers",
+      "variants": [
+        {"id": "default", "filename": "", "approx_size_gb": 10}
+      ]
+    },
+    {
+      "id": "video.wan2.1-1.3b",
+      "task": "video",
+      "display_name": "Wan2.1-T2V-1.3B (Experimental)",
+      "license": "Wan-AI",
+      "repo_id": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+      "runtime": "diffusers",
+      "experimental": true,
+      "variants": [
+        {"id": "default", "filename": "", "approx_size_gb": 12}
+      ]
+    }
+  ]
+}
